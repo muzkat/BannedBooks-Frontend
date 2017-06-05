@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1><a ng-href="#/home">BANNED BOOKS</a></h1>
+  <p class="lead">Liste der verbannten Bücher</p>
+</div>
+
+<div class="clearfix coverline">
+  <div class="circle bigicons"><i class="{{AwesomeIcon}}"></i></div><span class="locationtype">{{LocationType}}</span>
+</div>
+<br/>
+<br/>
+
+<button type="button" class="btn btn-default" ng-click="next()" >Next 100</button>
+<br><br>
+
+<div class="list-group" ng-repeat="book in books">
+  <a class="list-group-item">
+    <h4 class="list-group-item-heading" ng-click="getBook(book.id)">{{book.ocrresult}}</h4>
+    <p class="list-group-item-text">{{book.year}}</p>
+  </a>
+</div>
+
+<button type="button" class="btn btn-default" ng-click="next()" >Next 100</button>
+<br><br>
