@@ -2,8 +2,7 @@ var BannedBooks = angular.module('BannedBooks', [
 'ngRoute',
 'ngMessages',
 'Controllers',
-'BannedBooksSrv',
-'bannedBooksNav'
+'BannedBooksSrv'
 ]);
 
 BannedBooks.config(['$routeProvider',
@@ -17,7 +16,29 @@ function($routeProvider) {
     templateUrl: 'views/category.html',
     controller: 'CategoryCtrl'
   }).
+    when('/book/:bookId', {
+    templateUrl: 'views/singleBook.html',
+    controller: 'BookCtrl'
+  }).
   otherwise({
     redirectTo: '/home'
   });
 }]);
+
+BannedBooks.directive('bannedBooksNav', function() {
+  return {    
+    templateUrl: 'directives/bannedbooks-nav.html'
+  };
+});
+
+BannedBooks.directive('footer', function() {
+  return {    
+    templateUrl: 'directives/footer.html'
+  };
+}); 
+
+BannedBooks.directive('header', function() {
+  return {    
+    templateUrl: 'directives/header.html'
+  };
+}); 

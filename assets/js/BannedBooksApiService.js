@@ -5,7 +5,7 @@
   BannedBooksSrv.service("BannedBooksSrv",
   function( $http, $q) {
 
-    var baseUrl = 'http://192.168.178.25:8084/';   
+    var baseUrl = 'http://bannedbooks.sourcloud.com/';   
     
     return({
             getBooks                      : getBooks,
